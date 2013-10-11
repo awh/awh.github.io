@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Ne Plus Ultra]]></title>
+  <link href="http://awh.github.io/atom.xml" rel="self"/>
+  <link href="http://awh.github.io/"/>
+  <updated>2013-10-11T12:57:56+01:00</updated>
+  <id>http://awh.github.io/</id>
+  <author>
+    <name><![CDATA[Adam Harrison]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Four Horsemen of the Catapocalypse]]></title>
+    <link href="http://awh.github.io/blog/2013/09/03/the-four-horsemen-of-the-catapocalypse/"/>
+    <updated>2013-09-03T16:59:00+01:00</updated>
+    <id>http://awh.github.io/blog/2013/09/03/the-four-horsemen-of-the-catapocalypse</id>
+    <content type="html"><![CDATA[<p><a href="http://cdsmith.wordpress.com/2012/04/18/why-do-monads-matter/">Why do monads matter?</a> is the best exposition I have read so far.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Selection Bias in Appraising the Efficacy of Functional Programming Languages]]></title>
+    <link href="http://awh.github.io/blog/2013/08/26/selection-bias-in-appraising-the-efficacy-of-functional-programming-languages/"/>
+    <updated>2013-08-26T17:09:00+01:00</updated>
+    <id>http://awh.github.io/blog/2013/08/26/selection-bias-in-appraising-the-efficacy-of-functional-programming-languages</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently been watching various video lectures on functional programming and both of these contained responses to audience questions regarding the contribution of functional programming languages to the success of their respective endeavours:</p>
+
+<ul>
+<li><a href="http://www.youtube.com/watch?v=hKcOkWzj0_s">Caml Trading</a> &ndash; Yaron Minksy, Jane Street Capital</li>
+<li><a href="http://www.youtube.com/watch?v=ZR3Jirqk6W8">Running a startup on Haskell</a> &ndash; Bryan O&#8217;Sullivan (of <a href="http://book.realworldhaskell.org">Real World Haskell</a> fame)</li>
+</ul>
+
+
+<p>In both cases the speakers acknowledged what I suppose is an obvious truth: anyone who is interested in functional programming is likely to be so because they are extremely concerned with correctness, and therefore likely to produce quality code in any paradigm. Consequently it is difficult to objectively appraise the contribution of the functional paradigm to a successful project!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Functional Unparsing]]></title>
+    <link href="http://awh.github.io/blog/2013/08/12/functional-unparsing/"/>
+    <updated>2013-08-12T16:56:00+01:00</updated>
+    <id>http://awh.github.io/blog/2013/08/12/functional-unparsing</id>
+    <content type="html"><![CDATA[<p>Great paper on a strongly typed alternative to printf style format strings:</p>
+
+<ul>
+<li><a href="http://www.brics.dk/RS/98/12/BRICS-RS-98-12.pdf">Functional Unparsing</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reactive Resources]]></title>
+    <link href="http://awh.github.io/blog/2013/07/24/reactive-resources/"/>
+    <updated>2013-07-24T16:36:00+01:00</updated>
+    <id>http://awh.github.io/blog/2013/07/24/reactive-resources</id>
+    <content type="html"><![CDATA[<ul>
+<li><a href="http://www.reactivemanifesto.org">Reactive Manifesto</a></li>
+<li><a href="http://www.coursera.org/course/reactive">Principles of Reactive Programming</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[(Five Years) Late to the Party]]></title>
+    <link href="http://awh.github.io/blog/2013/07/21/five-years-late-to-the-party/"/>
+    <updated>2013-07-21T09:10:00+01:00</updated>
+    <id>http://awh.github.io/blog/2013/07/21/five-years-late-to-the-party</id>
+    <content type="html"><![CDATA[<p>I have obtained a Mac only recently, and even more recently started using it as a workstation for development. As a long time Linux user it has taken a bit of effort to get comfortable, and now that I am I thought I would document my findings in case it helps any remaining straggling refugees from the Desktop Wars:</p>
+
+<ul>
+<li><strong>Homebrew</strong> <a href="http://mxcl.github.io/homebrew">http://mxcl.github.io/homebrew</a></li>
+</ul>
+
+
+<p>It won&rsquo;t be long before your&rsquo;re itching to <code>apt-get install</code> or <code>yum install</code> something. There are a number of options here; MacPorts, Fink and HomeBrew. After a detour through MacPorts (engendered by one foolhardy Sunday morning attempt to add support for Lion fullscreen mode to VirtualBox, but that&rsquo;s another story entirely) I settled on HomeBrew as it seems to do its thing without spray-gunning chaff into your filesystem Windows style. Once you&rsquo;ve got it installed you will want to <code>brew install git mosh mtr nmap pstree rbenv irssi etc etc</code></p>
+
+<ul>
+<li><strong>TextWrangler</strong> <a href="http://www.barebones.com/products/textwrangler">http://www.barebones.com/products/textwrangler</a></li>
+</ul>
+
+
+<p>This excellent free editor is a great companion to a full fledged IDE. It supports Lion fullscreen mode and it properly indents soft-wrapped lines, a godsend for those of us unlucky enough to be editing XML (such as DocBook) by hand.</p>
+
+<ul>
+<li><strong>Parallels</strong> <a href="http://www.parallels.com">http://www.parallels.com</a></li>
+</ul>
+
+
+<p>As with package management systems there are a number of options here; VMWare, VirtualBox and Parallels. I have been using VirtualBox as part of my Software Defined Networking Coursera, and it seems entirely capable albeit lacking proper Lion fullscreen support (see above). Consequently I tried Parallels and found it to be truly excellent, for supported guests in particular &ndash; for example it understands the Ubuntu 12.04 LTS installer well enough to hand hold it to completion, and injects a paravirtualised video driver with hardware accelerated(!) OpenGL support. Being able to three-finger-swipe to a full screen Kubuntu that&rsquo;s indistinguishable from a bare metal install still feels like magic even when you understand how it&rsquo;s done.</p>
+
+<ul>
+<li><strong>Scrivener</strong> <a href="https://www.literatureandlatte.com/scrivener.php">https://www.literatureandlatte.com/scrivener.php</a></li>
+</ul>
+
+
+<p>This is a great tool for research and writing of any kind, including technical authorship &ndash; whenever I start a new project I do so in Scrivener and use it to keep track of research papers and whatever else pertains. Incidentally, I was surprised to find that whilst the OSX Preview tool is quite laggy on some large PDFs the viewer in Scrivener is buttery smooth &ndash; go figure. Despite being inexpensive Scrivener comes with a generous family licence as standard, an unexpectedly humane gesture which has secured me as a loyal customer for life!</p>
+
+<ul>
+<li><strong>Scapple</strong> <a href="https://www.literatureandlatte.com/scapple.php">https://www.literatureandlatte.com/scapple.php</a></li>
+</ul>
+
+
+<p>From the same folks as Scrivener, this Ideation Support Tool (I just made that up btw) has become indispensible. Unlike other mind mapping softwares which force you to start from a central concept and link outward in a proscribed fashion, Scapple lets you blast unrelated thoughts into it willy-nilly and then link them together (or not!) at your leisure. Life&rsquo;s a graph, not a tree&hellip;</p>
+
+<ul>
+<li><strong>OmniGraffle</strong> <a href="http://www.omnigroup.com/omnigraffle">http://www.omnigroup.com/omnigraffle</a></li>
+</ul>
+
+
+<p>Communication and presentation are critically important in conveying design and architecture, so a good diagramming tool is essential. Whilst I have out of necessity achieved some level of proficiency with LibreOffice Draw (enough so that my audience isn&rsquo;t immediately sick for example) in OmniGraffle creating beautiful diagrams is effortless. It&rsquo;s the most expensive item on this list, however they don&rsquo;t gouge you if you buy the standard version first and upgrade to the pro version later (in fact when I checked it was $0.01 cheaper that way!)</p>
+
+<ul>
+<li><strong>Divvy</strong> <a href="http://mizage.com/divvy/">http://mizage.com/divvy/</a></li>
+</ul>
+
+
+<p>Having grown up on a diet of <a href="http://www.fvwm.org">fvwm</a> and <a href="http://www.enlightenment.org">enlightenment</a> I don&rsquo;t know which I find more alien &ndash; the paucity of features in the OSX window manager, or having to pay to rectify the problem :) Divvy lets you quickly move resize windows accurately with either the mouse or key bindings &ndash; essential for that cinema display!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Come with me now on a journey through time and space]]></title>
+    <link href="http://awh.github.io/blog/2013/07/20/come-with-me-now-on-a-journey-through-time-and-space/"/>
+    <updated>2013-07-20T17:34:00+01:00</updated>
+    <id>http://awh.github.io/blog/2013/07/20/come-with-me-now-on-a-journey-through-time-and-space</id>
+    <content type="html"><![CDATA[<p>So&hellip; I&rsquo;ve decided to take my work back underground &ndash; to stop it falling into the wrong hands&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>
