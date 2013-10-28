@@ -9,7 +9,7 @@ I have obtained a Mac only recently, and even more recently started using it as 
 
 * **Homebrew** http://mxcl.github.io/homebrew
 
-It won't be long before your're itching to `apt-get install` or `yum install` something. There are a number of options here; MacPorts, Fink and HomeBrew. After a detour through MacPorts (engendered by one foolhardy Sunday morning attempt to add support for Lion fullscreen mode to VirtualBox, but that's another story entirely) I settled on HomeBrew as it seems to do its thing without spray-gunning chaff into your filesystem Windows style. Once you've got it installed you will want to `brew install git mosh mtr nmap pstree rbenv irssi etc etc`
+It won't be long before your're itching to `apt-get install` or `yum install` something. There are a number of options here; MacPorts, Fink and HomeBrew. After a detour through MacPorts (engendered by one foolhardy Sunday morning attempt to add support for Lion fullscreen mode to VirtualBox, but that's another story entirely) I settled on HomeBrew as it seems to do its thing without spray-gunning chaff into your filesystem Windows style. Once you've got it installed you will want to `brew install git mosh mtr nmap pstree rbenv irssi sbt etc etc`
 
 * **TextWrangler** http://www.barebones.com/products/textwrangler
 
