@@ -4,7 +4,7 @@
   <title><![CDATA[Ne Plus Ultra]]></title>
   <link href="http://awh.github.io/atom.xml" rel="self"/>
   <link href="http://awh.github.io/"/>
-  <updated>2013-10-28T11:14:32+00:00</updated>
+  <updated>2013-10-28T11:30:10+00:00</updated>
   <id>http://awh.github.io/</id>
   <author>
     <name><![CDATA[Adam Harrison]]></name>
@@ -103,7 +103,7 @@
 </ul>
 
 
-<p>It won&rsquo;t be long before your&rsquo;re itching to <code>apt-get install</code> or <code>yum install</code> something. There are a number of options here; MacPorts, Fink and HomeBrew. After a detour through MacPorts (engendered by one foolhardy Sunday morning attempt to add support for Lion fullscreen mode to VirtualBox, but that&rsquo;s another story entirely) I settled on HomeBrew as it seems to do its thing without spray-gunning chaff into your filesystem Windows style. Once you&rsquo;ve got it installed you will want to <code>brew install git mosh mtr nmap pstree rbenv irssi sbt etc etc</code></p>
+<p>It won&rsquo;t be long before your&rsquo;re itching to <code>apt-get install</code> or <code>yum install</code> something. There are a number of options here; MacPorts, Fink and HomeBrew. After a detour through MacPorts (engendered by one foolhardy Sunday morning attempt to add support for Lion fullscreen mode to VirtualBox, but that&rsquo;s another story entirely) I settled on HomeBrew as it seems to do its thing without spray-gunning chaff into your filesystem Windows style. Once you&rsquo;ve got it installed you will want to <code>brew install git mosh mtr nmap pstree rbenv irssi sbt zsh etc etc</code></p>
 
 <ul>
 <li><strong>TextWrangler</strong> <a href="http://www.barebones.com/products/textwrangler">http://www.barebones.com/products/textwrangler</a></li>
