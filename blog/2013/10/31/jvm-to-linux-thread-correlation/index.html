@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Reactive Resources - Ne Plus Ultra</title>
+  <title>JVM to Linux thread correlation - Ne Plus Ultra</title>
   <meta name="author" content="Adam Harrison">
 
   
-  <meta name="description" content="
-Reactive Manifesto
-Principles of Reactive Programming ">
+  <meta name="description" content="It is possible to correlate the output of ps with jstack to determine which JVM thread is consuming CPU: Determine the PID and LWP of the offending &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Principles of Reactive Programming ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://awh.github.io/blog/2013/07/24/reactive-resources">
+  <link rel="canonical" href="http://awh.github.io/blog/2013/10/31/jvm-to-linux-thread-correlation">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Ne Plus Ultra" type="application/atom+xml">
@@ -70,7 +68,7 @@ Principles of Reactive Programming ">
   
   <header>
     
-      <h1 class="entry-title">Reactive Resources</h1>
+      <h1 class="entry-title">JVM to Linux Thread Correlation</h1>
     
     
       <p class="meta">
@@ -86,18 +84,86 @@ Principles of Reactive Programming ">
   
 
 
-<time datetime="2013-07-24T16:36:00+01:00" pubdate data-updated="true">Jul 24<span>th</span>, 2013</time>
+<time datetime="2013-10-31T12:13:00+00:00" pubdate data-updated="true">Oct 31<span>st</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><ul>
-<li><a href="http://www.reactivemanifesto.org">Reactive Manifesto</a></li>
-<li><a href="http://www.coursera.org/course/reactive">Principles of Reactive Programming</a></li>
-</ul>
+<div class="entry-content"><p>It is possible to correlate the output of <code>ps</code> with <code>jstack</code> to determine which JVM thread is consuming CPU:</p>
 
+<h2>Determine the PID and LWP of the offending thread</h2>
+
+<p>Execute the following command:</p>
+
+<pre><code>ps -eLo pid,lwp,pcpu,comm | grep java
+</code></pre>
+
+<p>and note the PID and LWP of the thread which is consuming the CPU, in this case we can see LWP 30375 in PID 30358 is consuming 99.2%:</p>
+
+<pre><code>   PID   LWP %CPU COMMAND
+ 30358 30358  0.0 java
+ 30358 30359  0.0 java
+ 30358 30360  0.0 java
+ 30358 30361  0.0 java
+ 30358 30362  0.0 java
+ 30358 30363  0.0 java
+ 30358 30364  0.0 java
+ 30358 30365  0.0 java
+ 30358 30366  0.0 java
+ 30358 30367  0.0 java
+ 30358 30368  0.0 java
+ 30358 30369  0.0 java
+ 30358 30370  0.0 java
+ 30358 30371  0.0 java
+ 30358 30372  0.0 java
+ 30358 30373  0.0 java
+ 30358 30374  0.0 java
+ 30358 30375 99.2 java
+ 30358 30403  0.0 java
+</code></pre>
+
+<h2>Correlate with jstack</h2>
+
+<p>Execute the following command, substituting the PID found above (if the Java process is running as root you will need to sudo):</p>
+
+<pre><code>jstack 30358
+</code></pre>
+
+<p>This will produce output of the following form. The <code>nid=0x76a7</code> below is the hexadecimal representation of the busy LWP above (30375):</p>
+
+<pre><code>...
+...
+...
+"Busy thread" prio=10 tid=0x00007f2f780ad000 nid=0x76a7 runnable [0x00007f2f6ea65000]
+   java.lang.Thread.State: RUNNABLE
+        at Main$BusyThread.consumeAllTheCycles(Main.java:34)
+        at Main$BusyThread.run(Main.java:30)
+
+"Sleepy thread 3" prio=10 tid=0x00007f2f780aa800 nid=0x76a6 waiting on condition [0x00007f2f6eb66000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+        at java.lang.Thread.sleep(Native Method)
+        at Main$SleepyThread.sleepyTeim(Main.java:16)
+        at Main$SleepyThread.run(Main.java:10)
+
+"Sleepy thread 2" prio=10 tid=0x00007f2f780a8800 nid=0x76a5 waiting on condition [0x00007f2f6ec67000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+        at java.lang.Thread.sleep(Native Method)
+        at Main$SleepyThread.sleepyTeim(Main.java:16)
+        at Main$SleepyThread.run(Main.java:10)
+
+"Sleepy thread 1" prio=10 tid=0x00007f2f780a6800 nid=0x76a4 waiting on condition [0x00007f2f6ed68000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+        at java.lang.Thread.sleep(Native Method)
+        at Main$SleepyThread.sleepyTeim(Main.java:16)
+        at Main$SleepyThread.run(Main.java:10)
+...
+...
+...
+</code></pre>
+
+<p>In this example, we can see that the thread named <code>Busy thread</code> is the offender; the stack trace immediately below it can be used to determine exactly where in the code the problem lies &ndash; <code>consumeAllTheCycles()</code>!</p>
 </div>
 
 
@@ -120,7 +186,7 @@ Principles of Reactive Programming ">
   
 
 
-<time datetime="2013-07-24T16:36:00+01:00" pubdate data-updated="true">Jul 24<span>th</span>, 2013</time>
+<time datetime="2013-10-31T12:13:00+00:00" pubdate data-updated="true">Oct 31<span>st</span>, 2013</time>
       
 
 
@@ -128,7 +194,7 @@ Principles of Reactive Programming ">
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://awh.github.io/blog/2013/07/24/reactive-resources/" data-via="" data-counturl="http://awh.github.io/blog/2013/07/24/reactive-resources/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://awh.github.io/blog/2013/10/31/jvm-to-linux-thread-correlation/" data-via="" data-counturl="http://awh.github.io/blog/2013/10/31/jvm-to-linux-thread-correlation/" >Tweet</a>
   
   
   
@@ -137,10 +203,8 @@ Principles of Reactive Programming ">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/07/21/five-years-late-to-the-party/" title="Previous Post: (Five Years) Late to the Party">&laquo; (Five Years) Late to the Party</a>
+        <a class="basic-alignment left" href="/blog/2013/10/26/configuring-intellij-scala-projects/" title="Previous Post: Configuring IntelliJ Scala Projects">&laquo; Configuring IntelliJ Scala Projects</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/08/12/functional-unparsing/" title="Next Post: Functional Unparsing">Functional Unparsing &raquo;</a>
       
     </p>
   </footer>
