@@ -1,55 +1,75 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-    <url>
-        <loc>
-            http://awh.github.io/blog/2013/07/20/come-with-me-now-on-a-journey-through-time-and-space/
-        </loc>
-        <lastmod>2013-07-21T09:25:22+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/blog/2013/07/21/five-years-late-to-the-party/</loc>
-        <lastmod>2013-10-28T11:29:36+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/blog/2013/07/24/reactive-resources/</loc>
-        <lastmod>2013-10-11T12:44:27+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/blog/2013/08/12/functional-unparsing/</loc>
-        <lastmod>2013-10-11T12:48:26+01:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://awh.github.io/blog/2013/08/26/selection-bias-in-appraising-the-efficacy-of-functional-programming-languages/
-        </loc>
-        <lastmod>2013-10-11T12:51:10+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/blog/2013/09/03/the-four-horsemen-of-the-catapocalypse/</loc>
-        <lastmod>2013-10-11T12:49:46+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/blog/2013/10/11/micro-services/</loc>
-        <lastmod>2013-10-28T11:13:57+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/blog/2013/10/26/configuring-intellij-scala-projects/</loc>
-        <lastmod>2013-10-26T10:17:24+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/blog/2013/10/31/jvm-to-linux-thread-correlation/</loc>
-        <lastmod>2013-10-31T15:35:48+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/blog/archives/</loc>
-        <lastmod>2013-10-31T15:35:48+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/</loc>
-        <lastmod>2013-10-31T15:35:48+00:00</lastmod>
-    </url>
-    <url>
-        <loc>http://awh.github.io/robots.txt</loc>
-        <lastmod>2013-07-20T17:25:11+01:00</lastmod>
-    </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+  <url>
+    <loc>http://awh.github.io/blog/2013/10/31/jvm-to-linux-thread-correlation/</loc>
+    <lastmod>2013-10-31T12:13:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://awh.github.io/blog/2013/10/26/configuring-intellij-scala-projects/</loc>
+    <lastmod>2013-10-26T10:15:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://awh.github.io/blog/2013/10/11/micro-services/</loc>
+    <lastmod>2013-10-11T15:38:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://awh.github.io/blog/2013/09/03/the-four-horsemen-of-the-catapocalypse/</loc>
+    <lastmod>2013-09-03T16:59:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://awh.github.io/blog/2013/08/26/selection-bias-in-appraising-the-efficacy-of-functional-programming-languages/</loc>
+    <lastmod>2013-08-26T17:09:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://awh.github.io/blog/2013/08/12/functional-unparsing/</loc>
+    <lastmod>2013-08-12T16:56:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://awh.github.io/blog/2013/07/24/reactive-resources/</loc>
+    <lastmod>2013-07-24T16:36:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://awh.github.io/blog/2013/07/21/five-years-late-to-the-party/</loc>
+    <lastmod>2013-07-21T09:10:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://awh.github.io/blog/2013/07/20/come-with-me-now-on-a-journey-through-time-and-space/</loc>
+    <lastmod>2013-07-20T17:34:00+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http://awh.github.io/blog/archives/</loc>
+    <lastmod>2014-08-01T13:57:22+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://awh.github.io/</loc>
+    <lastmod>2014-08-01T13:57:22+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[Ne Plus Ultra]]></title>
   <link href="http://awh.github.io/atom.xml" rel="self"/>
   <link href="http://awh.github.io/"/>
-  <updated>2013-10-31T15:47:13+00:00</updated>
+  <updated>2014-08-01T13:57:22+01:00</updated>
   <id>http://awh.github.io/</id>
   <author>
     <name><![CDATA[Adam Harrison]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[JVM to Linux thread correlation]]></title>
+    <title type="html"><![CDATA[JVM to Linux Thread Correlation]]></title>
     <link href="http://awh.github.io/blog/2013/10/31/jvm-to-linux-thread-correlation/"/>
     <updated>2013-10-31T12:13:00+00:00</updated>
     <id>http://awh.github.io/blog/2013/10/31/jvm-to-linux-thread-correlation</id>
@@ -22,12 +22,9 @@
 
 <h2>Determine the PID and LWP of the offending thread</h2>
 
-<p>Execute the following command:</p>
-
-<pre><code>ps -eLo pid,lwp,pcpu,comm | grep java
-</code></pre>
-
-<p>and note the PID and LWP of the thread which is consuming the CPU, in this case we can see LWP 30375 in PID 30358 is consuming 99.2%:</p>
+<p>Execute the following command:
+    ps -eLo pid,lwp,pcpu,comm | grep java
+and note the PID and LWP of the thread which is consuming the CPU, in this case we can see LWP 30375 in PID 30358 is consuming 99.2%:</p>
 
 <pre><code>   PID   LWP %CPU COMMAND
  30358 30358  0.0 java
@@ -90,7 +87,7 @@
 ...
 </code></pre>
 
-<p>In this example, we can see that the thread named <code>Busy thread</code> is the offender; the stack trace immediately below it can be used to determine exactly where in the code the problem lies &ndash; <code>consumeAllTheCycles()</code>!</p>
+<p>In this example, we can see that the thread named <code>Busy thread</code> is the offender; the stack trace immediately below it can be used to determine exactly where in the code the problem lies - <code>consumeAllTheCycles()</code>!</p>
 ]]></content>
   </entry>
   
@@ -136,8 +133,8 @@
     <content type="html"><![CDATA[<p>I&rsquo;ve recently been watching various video lectures on functional programming and both of these contained responses to audience questions regarding the contribution of functional programming languages to the success of their respective endeavours:</p>
 
 <ul>
-<li><a href="http://www.youtube.com/watch?v=hKcOkWzj0_s">Caml Trading</a> &ndash; Yaron Minksy, Jane Street Capital</li>
-<li><a href="http://www.youtube.com/watch?v=ZR3Jirqk6W8">Running a startup on Haskell</a> &ndash; Bryan O&#8217;Sullivan (of <a href="http://book.realworldhaskell.org">Real World Haskell</a> fame)</li>
+<li><a href="http://www.youtube.com/watch?v=hKcOkWzj0_s">Caml Trading</a> - Yaron Minksy, Jane Street Capital</li>
+<li><a href="http://www.youtube.com/watch?v=ZR3Jirqk6W8">Running a startup on Haskell</a> - Bryan O&#8217;Sullivan (of <a href="http://book.realworldhaskell.org">Real World Haskell</a> fame)</li>
 </ul>
 
 
@@ -198,14 +195,14 @@
 </ul>
 
 
-<p>As with package management systems there are a number of options here; VMWare, VirtualBox and Parallels. I have been using VirtualBox as part of my Software Defined Networking Coursera, and it seems entirely capable albeit lacking proper Lion fullscreen support (see above). Consequently I tried Parallels and found it to be truly excellent, for supported guests in particular &ndash; for example it understands the Ubuntu 12.04 LTS installer well enough to hand hold it to completion, and injects a paravirtualised video driver with hardware accelerated(!) OpenGL support. Being able to three-finger-swipe to a full screen Kubuntu that&rsquo;s indistinguishable from a bare metal install still feels like magic even when you understand how it&rsquo;s done.</p>
+<p>As with package management systems there are a number of options here; VMWare, VirtualBox and Parallels. I have been using VirtualBox as part of my Software Defined Networking Coursera, and it seems entirely capable albeit lacking proper Lion fullscreen support (see above). Consequently I tried Parallels and found it to be truly excellent, for supported guests in particular - for example it understands the Ubuntu 12.04 LTS installer well enough to hand hold it to completion, and injects a paravirtualised video driver with hardware accelerated(!) OpenGL support. Being able to three-finger-swipe to a full screen Kubuntu that&rsquo;s indistinguishable from a bare metal install still feels like magic even when you understand how it&rsquo;s done.</p>
 
 <ul>
 <li><strong>Scrivener</strong> <a href="https://www.literatureandlatte.com/scrivener.php">https://www.literatureandlatte.com/scrivener.php</a></li>
 </ul>
 
 
-<p>This is a great tool for research and writing of any kind, including technical authorship &ndash; whenever I start a new project I do so in Scrivener and use it to keep track of research papers and whatever else pertains. Incidentally, I was surprised to find that whilst the OSX Preview tool is quite laggy on some large PDFs the viewer in Scrivener is buttery smooth &ndash; go figure. Despite being inexpensive Scrivener comes with a generous family licence as standard, an unexpectedly humane gesture which has secured me as a loyal customer for life!</p>
+<p>This is a great tool for research and writing of any kind, including technical authorship - whenever I start a new project I do so in Scrivener and use it to keep track of research papers and whatever else pertains. Incidentally, I was surprised to find that whilst the OSX Preview tool is quite laggy on some large PDFs the viewer in Scrivener is buttery smooth - go figure. Despite being inexpensive Scrivener comes with a generous family licence as standard, an unexpectedly humane gesture which has secured me as a loyal customer for life!</p>
 
 <ul>
 <li><strong>Scapple</strong> <a href="https://www.literatureandlatte.com/scapple.php">https://www.literatureandlatte.com/scapple.php</a></li>
@@ -226,16 +223,16 @@
 </ul>
 
 
-<p>Having grown up on a diet of <a href="http://www.fvwm.org">fvwm</a> and <a href="http://www.enlightenment.org">enlightenment</a> I don&rsquo;t know which I find more alien &ndash; the paucity of features in the OSX window manager, or having to pay to rectify the problem :) Divvy lets you quickly move resize windows accurately with either the mouse or key bindings &ndash; essential for that cinema display!</p>
+<p>Having grown up on a diet of <a href="http://www.fvwm.org">fvwm</a> and <a href="http://www.enlightenment.org">enlightenment</a> I don&rsquo;t know which I find more alien - the paucity of features in the OSX window manager, or having to pay to rectify the problem :) Divvy lets you quickly move resize windows accurately with either the mouse or key bindings - essential for that cinema display!</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Come with me now on a journey through time and space]]></title>
+    <title type="html"><![CDATA[Come With Me Now on a Journey Through Time and Space]]></title>
     <link href="http://awh.github.io/blog/2013/07/20/come-with-me-now-on-a-journey-through-time-and-space/"/>
     <updated>2013-07-20T17:34:00+01:00</updated>
     <id>http://awh.github.io/blog/2013/07/20/come-with-me-now-on-a-journey-through-time-and-space</id>
-    <content type="html"><![CDATA[<p>So&hellip; I&rsquo;ve decided to take my work back underground &ndash; to stop it falling into the wrong hands&hellip;</p>
+    <content type="html"><![CDATA[<p>So&hellip; I&rsquo;ve decided to take my work back underground - to stop it falling into the wrong hands&hellip;</p>
 ]]></content>
   </entry>
   

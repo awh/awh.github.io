@@ -24,13 +24,25 @@
   <link href="/atom.xml" rel="alternate" title="Ne Plus Ultra" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-53441940-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -84,7 +96,7 @@
   
 
 
-<time datetime="2013-07-21T09:10:00+01:00" pubdate data-updated="true">Jul 21<span>st</span>, 2013</time>
+<time datetime="2013-07-21T09:10:00+01:00" pubdate data-updated="true">Jul 21<sup>st</sup>, 2013</time>
         
       </p>
     
@@ -112,14 +124,14 @@
 </ul>
 
 
-<p>As with package management systems there are a number of options here; VMWare, VirtualBox and Parallels. I have been using VirtualBox as part of my Software Defined Networking Coursera, and it seems entirely capable albeit lacking proper Lion fullscreen support (see above). Consequently I tried Parallels and found it to be truly excellent, for supported guests in particular &ndash; for example it understands the Ubuntu 12.04 LTS installer well enough to hand hold it to completion, and injects a paravirtualised video driver with hardware accelerated(!) OpenGL support. Being able to three-finger-swipe to a full screen Kubuntu that&rsquo;s indistinguishable from a bare metal install still feels like magic even when you understand how it&rsquo;s done.</p>
+<p>As with package management systems there are a number of options here; VMWare, VirtualBox and Parallels. I have been using VirtualBox as part of my Software Defined Networking Coursera, and it seems entirely capable albeit lacking proper Lion fullscreen support (see above). Consequently I tried Parallels and found it to be truly excellent, for supported guests in particular - for example it understands the Ubuntu 12.04 LTS installer well enough to hand hold it to completion, and injects a paravirtualised video driver with hardware accelerated(!) OpenGL support. Being able to three-finger-swipe to a full screen Kubuntu that&rsquo;s indistinguishable from a bare metal install still feels like magic even when you understand how it&rsquo;s done.</p>
 
 <ul>
 <li><strong>Scrivener</strong> <a href="https://www.literatureandlatte.com/scrivener.php">https://www.literatureandlatte.com/scrivener.php</a></li>
 </ul>
 
 
-<p>This is a great tool for research and writing of any kind, including technical authorship &ndash; whenever I start a new project I do so in Scrivener and use it to keep track of research papers and whatever else pertains. Incidentally, I was surprised to find that whilst the OSX Preview tool is quite laggy on some large PDFs the viewer in Scrivener is buttery smooth &ndash; go figure. Despite being inexpensive Scrivener comes with a generous family licence as standard, an unexpectedly humane gesture which has secured me as a loyal customer for life!</p>
+<p>This is a great tool for research and writing of any kind, including technical authorship - whenever I start a new project I do so in Scrivener and use it to keep track of research papers and whatever else pertains. Incidentally, I was surprised to find that whilst the OSX Preview tool is quite laggy on some large PDFs the viewer in Scrivener is buttery smooth - go figure. Despite being inexpensive Scrivener comes with a generous family licence as standard, an unexpectedly humane gesture which has secured me as a loyal customer for life!</p>
 
 <ul>
 <li><strong>Scapple</strong> <a href="https://www.literatureandlatte.com/scapple.php">https://www.literatureandlatte.com/scapple.php</a></li>
@@ -140,7 +152,7 @@
 </ul>
 
 
-<p>Having grown up on a diet of <a href="http://www.fvwm.org">fvwm</a> and <a href="http://www.enlightenment.org">enlightenment</a> I don&rsquo;t know which I find more alien &ndash; the paucity of features in the OSX window manager, or having to pay to rectify the problem :) Divvy lets you quickly move resize windows accurately with either the mouse or key bindings &ndash; essential for that cinema display!</p>
+<p>Having grown up on a diet of <a href="http://www.fvwm.org">fvwm</a> and <a href="http://www.enlightenment.org">enlightenment</a> I don&rsquo;t know which I find more alien - the paucity of features in the OSX window manager, or having to pay to rectify the problem :) Divvy lets you quickly move resize windows accurately with either the mouse or key bindings - essential for that cinema display!</p>
 </div>
 
 
@@ -163,7 +175,7 @@
   
 
 
-<time datetime="2013-07-21T09:10:00+01:00" pubdate data-updated="true">Jul 21<span>st</span>, 2013</time>
+<time datetime="2013-07-21T09:10:00+01:00" pubdate data-updated="true">Jul 21<sup>st</sup>, 2013</time>
       
 
 
@@ -220,6 +232,35 @@
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/awh">@awh</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'awh',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
 
 
 
@@ -231,7 +272,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Adam Harrison -
+  Copyright &copy; 2014 - Adam Harrison -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
